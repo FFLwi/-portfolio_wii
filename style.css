@@ -95,11 +95,15 @@
   
   /* Navbar */
   #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    background-color: var(--color-pink);
+    background-color: transparent;
+    transition: var(--animation-duration) ease-in-out;
+    z-index: 1;
   }
   
   .navbar__logo {
@@ -137,11 +141,20 @@
     color: var(--color-white);
     display: none;
   }
-  
+  #navbar.navbar--dark{
+    background-color: var(--color-pink);
+    pedding: 8px;
+  }
+  #navbar__logo{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: white;
+  }
   /* Home */
   #home {
-    background: url('imgs/home-background.png') center/cover no-repeat;
+    background: url('imgs/homebackground.png') center/cover no-repeat;
     padding: 40px;
+    padding-top:120px;
     text-align: center;
   }
   
